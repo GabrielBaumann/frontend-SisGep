@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+<body class="md:h-screen bg-gradient-to-br from-blue-100 to-green-100 p-6 grid grid-rows-8">
+
+    <!-- Mobile bottom navigation -->
+     <div class="z-99 md:hidden fixed right-[15vw] bottom-10 bg-black p-1 rounded-full shadow-xl">
+        <div class="flex items-center gap-2">
+            <div class="shadow-sm flex items-center gap-6 bg-green-300 rounded-full p-4">
+                <a href="" class="flex items-center gap-1 p-1 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                </a>
+            </div>
+            <div class="shadow-sm flex items-center gap-6 bg-white/20 rounded-full p-4">
+                <a href="" class="flex items-center gap-1 p-1 rounded-full text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="shadow-sm flex items-center gap-6 bg-white/20 rounded-full p-4">
+                <a href="" class="flex items-center gap-1 p-1 rounded-full text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                    </svg>
+                </a>
+            </div>
+            <div class="shadow-sm flex items-center gap-6 bg-white/20 rounded-full p-4">
+                <a href="" class="flex items-center gap-1 p-1 rounded-full text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+     </div>
+
+    <!-- Main header -->
+    <header class="row-span-1 hidden md:flex justify-between items-center text-sm">
+        <!-- Logo -->
+        <div class="overflow-hidden h-[9vh]">
+            <img src="/logo.png" alt="logo" class="h-full w-full object-contain object-center">
+        </div>
+
+        <!-- Header -->
+        <div class="flex items-center gap-3">
+            <div class="shadow-sm flex items-center gap-3 bg-white rounded-full p-1">
+                <a href="" class="py-4 px-6 bg-black/90 text-white rounded-full">Início</a>
+                <a href="" class="py-4 px-6">Servidores</a>
+                <a href="" class="py-4 px-6">Gestão integrada</a>
+                <a href="" class="py-4 px-6">Relatórios</a>
+            </div>
+            <div class="shadow-sm flex items-center gap-6 bg-white rounded-full p-1">
+                <a href="" class="flex items-center gap-1 py-4 px-4 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <span>Configurações</span>
+                </a>
+            </div>
+            <div class="shadow-sm flex items-center gap-6 bg-white rounded-full p-4">
+                <a href="" class="flex items-center gap-1 p-1 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                    </svg>
+                </a>
+            </div>
+            <div class="shadow-sm flex items-center gap-6 bg-white rounded-full p-4">
+                <a href="" class="flex items-center gap-1 p-1 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Welcome header -->
+    <header class="row-span-2">
+        <h1 class="text-4xl">Bem vindo de volta, João!</h1>
+        <div class="mt-3 w-full grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
+
+            <!-- First part -->
+            <div class="flex flex-col md:col-span-1 bg-">
+                <!-- Progress bar -->
+                <div class="grid grid-cols-1 md:grid-cols-6 gap-3">
+                    <div class="md:col-span-1 flex flex-col gap-2">
+                        <h2>Servidores</h2>
+                        <div class="bg-black rounded-full py-3 pl-3 pr-12 text-white">15%</div>
+                    </div>
+                    <div class="md:col-span-1 flex flex-col gap-2">
+                        <h2>Servidores</h2>
+                        <div class="bg-yellow-500 rounded-full py-3 pl-3 pr-12 text-black">15%</div>
+                    </div>
+                    <div class="md:col-span-3 flex flex-col gap-2">
+                        <h2>Servidores</h2>
+                        <div class="bg-white rounded-full py-3 pl-3 pr-12 text-gray-700">60%</div>
+                    </div>
+                    <div class="md:col-span-1 flex flex-col gap-2">
+                        <h2>Servidores</h2>
+                        <div class="border border-gray-700 rounded-full py-3 pl-3 pr-12 text-gray-700">10%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second part -->
+            <div class="col-span-1">
+                <div class="flex items-center justify-between md:gap-12 md:justify-end">
+                    <!-- Card -->
+                    <div class="flex flex-col">
+                        <div class="flex items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 bg-gray-200 p-1 rounded-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                            </svg>
+                            <span class="text-2xl md:text-7xl">78</span>
+                        </div>
+                        <span>Servidores</span>
+                    </div>
+                    <!-- Card -->
+                    <div class="flex flex-col">
+                        <div class="flex items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 bg-gray-200 p-1 rounded-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                            </svg>
+                            <span class="text-2xl md:text-7xl">56</span>
+                        </div>
+                        <span>Servidores</span>
+                    </div>
+                    <!-- Card -->
+                    <div class="flex flex-col">
+                        <div class="flex items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 bg-gray-200 p-1 rounded-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                            </svg>
+                            <span class="text-3xl md:text-7xl">203</span>
+                        </div>
+                        <span>Servidores</span>
+                    </div>
+
+                    
+
+                    
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard area -->
+    <main class="row-span-5">
+        <div class="h-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-1">
+
+            <div class="overflow-hidden bg-black/30 shadow-sm rounded-3xl col-span-1 md:row-span-1 w-full h-full">
+                <img src="/office-light.jpg" alt="office" class="h-full w-full object-center blur-xl z-1">
+
+                
+
+            </div>  
+
+            <!-- Daily graphic -->
+            <div class="bg-white/60 shadow-sm rounded-3xl md:col-span-1 md:row-span-1 w-full h-full">
+                <header class="p-4 flex justify-between">
+                    <h1 class="text-2xl">Gráfico dia</h1>
+                    <a href="" class="p-3 bg-white rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </a>
+                </header>
+
+                <!-- graphic -->
+                <div class="">
+
+                </div>
+            </div>
+
+            <!-- General vision -->
+            <div class="bg-white/60 shadow-sm rounded-3xl md:col-span-1 md:row-span-1 w-full h-full">
+                <header class="p-4 flex justify-between">
+                    <h1 class="text-2xl">Visão geral</h1>
+                    <a href="" class="p-3 bg-white rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </a>
+                </header>
+
+                <!-- graphic -->
+                <div class="">
+
+                </div>
+            </div>
+
+            <!-- Graphic on top & Card in Bottom -->
+            <div class="bg-white/60 shadow-sm rounded-3xl md:col-span-1 md:row-span-2 w-full h-full grid grid-rows-3 overflow-hidden p-4">
+                <div class="row-span-1">aaa</div>
+
+                
+                <!-- Onboarding tasks -->
+                <div class="row-span-2 bg-black/80 rounded-3xl p-4 overflow-y-auto overflow-hidden">
+                    <header class="flex items-center justify-between">
+                        <h1 class="text-white text-xl">À fazeres do dia</h1>
+                        <h1 class="text-white text-3xl">2/8</h1>
+                    </header>
+
+                    <div class="flex flex-col ">
+                        <!-- Task -->
+                         <div class="flex items-center gap-1 justify-between text-white py-2">
+                            <!-- Icon -->
+                            <div class="p-3 bg-white/20 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                                <path fill-rule="evenodd" d="M2.25 5.25a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3V15a3 3 0 0 1-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 0 1-.53 1.28h-9a.75.75 0 0 1-.53-1.28l.621-.622a2.25 2.25 0 0 0 .659-1.59V18h-3a3 3 0 0 1-3-3V5.25Zm1.5 0v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5Z" clip-rule="evenodd" />
+                                </svg>
+
+                            </div>
+
+                            <!-- Little text -->
+                            <div class="flex flex-col justify-between">
+                                <p class="text-md">Preencher fichas</p>
+                                <p class="text-sm text-gray-200">10 de Novembro às 10:30h</p>
+                            </div>
+
+                            <!-- Check icon -->
+                             <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-yellow-500">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                                </svg>
+
+                             </div>
+                         </div>
+                        <!-- Task -->
+                         <div class="flex items-center gap-1 justify-between text-white py-2">
+                            <!-- Icon -->
+                            <div class="p-3 bg-white/20 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                                </svg>
+
+
+                            </div>
+
+                            <!-- Little text -->
+                            <div class="flex flex-col justify-between">
+                                <p class="text-md">Reunião</p>
+                                <p class="text-sm text-gray-200">10 de Novembro às 11:20h</p>
+                            </div>
+
+                            <!-- Check icon -->
+                             <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-yellow-500">
+                                <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clip-rule="evenodd" />
+                                </svg>
+
+                             </div>
+                         </div>
+                        <!-- Task -->
+                         <div class="flex items-center gap-1 justify-between text-white py-2">
+                            <!-- Icon -->
+                            <div class="p-3 bg-white rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-black">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                </svg>
+
+                            </div>
+
+                            <!-- Little text -->
+                            <div class="flex flex-col justify-between">
+                                <p class="text-md">Atualização</p>
+                                <p class="text-sm text-gray-200">10 de Novembro às 13:20h</p>
+                            </div>
+
+                            <!-- Check icon -->
+                             <div class="p-2 w-[20px] h-[20px] bg-white/20 rounded-full">
+                                
+
+                             </div>
+                         </div>
+                        <!-- Task -->
+                         <div class="flex items-center gap-1 justify-between text-white py-2">
+                            <!-- Icon -->
+                            <div class="p-3 bg-white rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-black">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                                </svg>
+
+                            </div>
+
+                            <!-- Little text -->
+                            <div class="flex flex-col justify-between">
+                                <p class="text-md">Revisão</p>
+                                <p class="text-sm text-gray-200">10 de Novembro às 15:40h</p>
+                            </div>
+
+                            <!-- Check icon -->
+                             <div class="p-2 w-[20px] h-[20px] bg-white/20 rounded-full">
+                                
+
+                             </div>
+                         </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- General table -->
+            <div class="bg-white/60 shadow-sm rounded-3xl md:col-span-1 md:row-span-1 w-full h-full">
+                <div class="">
+                    
+                </div>
+            </div>
+
+            <!-- Calendar -->
+            <div class="bg-white/60 shadow-sm rounded-3xl md:col-span-2 md:row-span-1 w-full h-full">
+                
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>
