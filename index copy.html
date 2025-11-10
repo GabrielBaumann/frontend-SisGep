@@ -13,9 +13,9 @@
         }
     </style>
 </head>
-<body class="md:h-screen grid grid-rows-8">
+<body class="md:h-screen grid grid-rows-8 bg-gradient-to-br from-gray-200 to-yellow-100">
     
-    <header class="px-4 row-span-1 flex items-center justify-between">
+    <header class="hidden md:flex px-4 row-span-1 flex items-center justify-between">
         <div class="flex items-center gap-4">
             <!-- Logo -->
             <div class="h-[7vh]">
@@ -56,15 +56,75 @@
     </header>
 
     <!-- Welcome area -->
-    <div class="row-span-2">
+    <div class="row-span-2 px-4 pt-4 md:pt-0 flex flex-col justify-center">
+        <h1 class="text-4xl">Bem vindo de volta, João!</h1>
+        <div class="mt-3 w-full grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
+            <!-- First part -->
+            <div class="flex flex-col md:col-span-1 bg-">
+                <!-- Progress bar -->
+                <div class="grid grid-cols-1 md:grid-cols-6 gap-3">
+                    <div class="md:col-span-1 flex flex-col gap-2">
+                        <h2>Servidores</h2>
+                        <div class="bg-black/70 rounded-full py-3 pl-3 pr-12 text-white">15%</div>
+                    </div>
+                    <div class="md:col-span-1 flex flex-col gap-2">
+                        <h2>Servidores</h2>
+                        <div class="bg-yellow-500 rounded-full py-3 pl-3 pr-12 text-black">15%</div>
+                    </div>
+                    <div class="md:col-span-3 flex flex-col gap-2">
+                        <h2>Servidores</h2>
+                        <div class="bg-white rounded-full py-3 pl-3 pr-12 text-gray-700">60%</div>
+                    </div>
+                    <div class="md:col-span-1 flex flex-col gap-2">
+                        <h2>Servidores</h2>
+                        <div class="border border-gray-700 rounded-full py-3 pl-3 pr-12 text-gray-700">10%</div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Second part -->
+            <div class="col-span-1">
+                <div class="flex items-center justify-between md:gap-12 md:justify-end">
+                    <!-- Card -->
+                    <div class="flex flex-col">
+                        <div class="flex items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 bg-gray-200 p-1 rounded-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                            </svg>
+                            <span class="text-2xl md:text-7xl">78</span>
+                        </div>
+                        <span>Servidores</span>
+                    </div>
+                    <!-- Card -->
+                    <div class="flex flex-col">
+                        <div class="flex items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 bg-gray-200 p-1 rounded-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                            </svg>
+                            <span class="text-2xl md:text-7xl">56</span>
+                        </div>
+                        <span>Servidores</span>
+                    </div>
+                    <!-- Card -->
+                    <div class="flex flex-col">
+                        <div class="flex items-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 bg-gray-200 p-1 rounded-full">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                            </svg>
+                            <span class="text-3xl md:text-7xl">203</span>
+                        </div>
+                        <span>Servidores</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <main class="row-span-5 p-3 bg-gray-50">
+    <main class="row-span-5 p-3">
     <div class="h-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-3">
 
         <!-- Card de Estatísticas (Destaque) -->
-        <div class="bg-gradient-to-br from-blue-700 to-blue-800 overflow-hidden rounded-xl col-span-1 md:row-span-1 w-full h-full p-4 shadow-lg">
+        <div class="bg-gradient-to-br from-blue-700 to-blue-800 overflow-hidden rounded-3xl col-span-1 md:row-span-1 w-full h-full p-4">
             <div class="flex flex-col h-full justify-between">
                 <div>
                     <h2 class="text-lg font-semibold text-white mb-1">Funcionários</h2>
@@ -103,7 +163,7 @@
         </div>  
 
         <!-- Gráfico Diário -->
-        <div class="bg-white rounded-xl md:col-span-1 md:row-span-1 w-full h-full shadow-sm border border-gray-200 flex flex-col">
+        <div class="bg-white/80 rounded-3xl md:col-span-1 md:row-span-1 w-full h-full flex flex-col">
             <header class="p-3 flex justify-between border-b border-gray-100">
                 <h1 class="text-base font-semibold text-gray-800">Gráfico Diário</h1>
                 <a href="" class="p-1.5 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
@@ -161,7 +221,7 @@
         </div>
 
         <!-- Visão Geral -->
-        <div class="bg-white rounded-xl md:col-span-1 md:row-span-1 w-full h-full shadow-sm border border-gray-200 flex flex-col">
+        <div class="bg-white/80 rounded-3xl md:col-span-1 md:row-span-1 w-full h-full flex flex-col">
             <header class="p-3 flex justify-between border-b border-gray-100">
                 <h1 class="text-base font-semibold text-gray-800">Visão Geral</h1>
                 <a href="" class="p-1.5 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
@@ -200,7 +260,7 @@
         </div>
 
         <!-- Gráfico e Card -->
-        <div class="bg-white rounded-xl md:col-span-1 md:row-span-2 w-full h-full grid grid-rows-2 overflow-hidden shadow-sm border border-gray-200">
+        <div class="bg-white/80 rounded-3xl md:col-span-1 md:row-span-2 w-full h-full grid grid-rows-2 overflow-hidden">
             <!-- Gráfico de linha no topo -->
             <div class="p-3 border-b border-gray-100 flex flex-col">
                 <h2 class="text-base font-semibold text-gray-800 mb-2">Performance</h2>
@@ -251,7 +311,7 @@
         </div>
 
         <!-- Tabela de Escolaridade -->
-        <div class="bg-white rounded-xl md:col-span-1 md:row-span-1 w-full h-full shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="bg-white/80 rounded-3xl md:col-span-1 md:row-span-1 w-full h-full overflow-hidden flex flex-col">
             <div class="p-3 h-full flex flex-col">
                 <h2 class="text-base font-semibold text-gray-800 mb-2">Escolaridade</h2>
                 <div class="overflow-x-auto flex-1">
@@ -291,7 +351,7 @@
         </div>
 
         <!-- Gráfico de Turnover -->
-        <div class="bg-white rounded-xl md:col-span-2 md:row-span-1 w-full h-full shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+        <div class="bg-white/80 rounded-3xl md:col-span-2 md:row-span-1 w-full h-full overflow-hidden flex flex-col">
             <header class="p-3 flex justify-between items-center border-b border-gray-100">
                 <h1 class="text-base font-semibold text-gray-800">Turnover por Trimestre</h1>
                 <div class="flex space-x-1">
