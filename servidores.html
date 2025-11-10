@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>SisGep - SEMSA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+<body class="md:h-screen bg-white grid grid-rows-8 ">
+    
+    <header class="px-4 row-span-1 bg-red-300 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <!-- Logo -->
+            <div class="h-[7vh]">
+                <img src="/img/logo.png" alt="logo" class="w-full h-full object-contain object-center">
+            </div>
+            <div class="hidden md:flex items-center gap-3 bg-white rounded-full p-1">
+                <a href="/index copy.html" class="py-3 px-6 ">Início</a>
+                <a href="/servidores.html" class="py-3 px-6 bg-black/90 text-white rounded-full">Servidores</a>
+                <a href="" class="py-3 px-6">Gestão integrada</a>
+                <a href="" class="py-3 px-6">Relatórios</a>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="hidden md:flex items-center gap-2">
+            <div class=" flex items-center gap-6 bg-white rounded-full p-1">
+                <a href="" class="flex items-center gap-1 py-3 px-4 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <span>Configurações</span>
+                </a>
+            </div>
+            <div class=" flex items-center gap-6 bg-white rounded-full p-3">
+                <a href="" class="flex items-center gap-1 p-1 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                    </svg>
+                </a>
+            </div>
+            <div class="flex items-center">
+                <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
+                    <img src="/img/profile.avif" alt="profile" class="w-full h-full object-cover object-contain">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Welcome area -->
+    <div class="row-span-2 bg-blue-300">
+
+    </div>
+
+    <main class="row-span-5 bg-orange-300 p-4">
+        <div class="bg-white/60 h-full rounded-3xl p-4 flex flex-col gap-4">
+            <header class="grid grid-cols-1 md:grid-cols-8 gap-3">
+                <select name="" id="" class="bg-white rounded-full p-3 md:col-span-1">
+                    <option value="">Nome</option>
+                </select>
+                <select name="" id="" class="bg-white rounded-full p-3 md:col-span-1">
+                    <option value="">Nome</option>
+                </select>
+                <select name="" id="" class="bg-white rounded-full p-3 md:col-span-1">
+                    <option value="">Nome</option>
+                </select>
+                <input type="text" class="bg-white rounded-full p-3 col-span-3" placeholder="Pesquisar...">
+                <button class="flex items-center justify-center gap-2 bg-white rounded-full p-3 md:col-span-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                    </svg>
+                    <span>Novo</span>
+                </button>
+                <button class="flex items-center justify-center gap-2 bg-white rounded-full p-3 md:col-span-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>
+                    <span>Exportar</span>
+                </button>
+                
+            </header>
+
+            <main class="bg-white rounded-3xl overflow-y-auto flex flex-col gap-4 h-full p-4">
+
+                <!-- Head line -->
+                <div class="px-6 grid grid-cols-1 md:grid-cols-14 py-3 flex ">
+                    <div class="col-span-1">
+                        <input type="checkbox">
+                    </div>
+                    <div class="col-span-3">
+                        <h1 class="text-gray-500">Nome</h1>
+                    </div>
+                    <div class="col-span-2">
+                        <h1 class="text-gray-500">Função</h1>
+                    </div>
+                    <div class="col-span-2">
+                        <h1 class="text-gray-500">Departamento</h1>
+                    </div>
+                    <div class="col-span-2">
+                        <h1 class="text-gray-500">Data de cadastro</h1>
+                    </div>
+                    <div class="col-span-2">
+                        <h1 class="text-gray-500">Tipo de vínculo</h1>
+                    </div>
+                    <div class="col-span-2">
+                        <h1 class="text-gray-500">Status</h1>
+                    </div>
+                </div>
+
+                <div class="h-[1px] bg-gray-300"></div>
+
+                <!-- line -->
+                <div class="hover:cursor-pointer hover:bg-yellow-500/40 px-6 transition-all duration-200 rounded-3xl grid grid-cols-1 md:grid-cols-14 py-3 gap-4">
+                    <div class="col-span-1 flex items-center">
+                        <input type="checkbox">
+                    </div>
+                    <div class="col-span-3 flex items-center gap-3">
+                        <div class="flex items-center gap-3">
+                            <div class="overflow-hidden rounded-full h-[50px] w-[50px]">
+                                <img src="/img/female.jpg" alt="exemplo-pessoa" class="h-full w-full object-center object-cover">
+                            </div>
+                            <h1 class="text-gray-900 font-semibold">Maria da Silva Santos</h1>
+                        </div>
+                    </div>
+                    <div class="col-span-2 flex items-center">
+                        <h1 class="text-gray-900 font-semibold">Agente Administrativo</h1>
+                    </div>
+                    <div class="col-span-2 flex items-center">
+                        <h1 class="text-gray-900 font-semibold">Recursos Humanos</h1>
+                    </div>
+                    <div class="col-span-2 flex items-center">
+                        <h1 class="text-gray-900 font-semibold">18/05/2025</h1>
+                    </div>
+                    <div class="col-span-2 flex items-center">
+                        <h1 class="text-gray-900 font-semibold">Contratado</h1>
+                    </div>
+                    <div class="col-span-2 flex items-center">
+                        <div class="text-gray-900 font-semibold bg-green-100 py-3 px-4 rounded-full flex items-center gap-2">
+                            <div class="bg-green-500 rounded-full h-[10px] w-[10px]"></div>
+                            <span>Ativo</span>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </main>
+
+</body>
+</html>
