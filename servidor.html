@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>SisGep - SEMSA</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        body {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+<body class="md:h-screen bg-gray-200 grid grid-rows-8">
+    <header class="hidden md:flex px-4 row-span-1 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <!-- Logo -->
+            <div class="h-[7vh]">
+                <img src="/img/logo.png" alt="logo" class="w-full h-full object-contain object-center">
+            </div>
+            <div class="hidden md:flex items-center gap-3 bg-white rounded-full p-1">
+                <a href="/index copy.html" class="py-3 px-6 ">Início</a>
+                <a href="/servidores.html" class="py-3 px-6 bg-black/90 text-white rounded-full">Servidores</a>
+                <a href="" class="py-3 px-6">Gestão integrada</a>
+                <a href="" class="py-3 px-6">Relatórios</a>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="hidden md:flex items-center gap-2">
+            <div class=" flex items-center gap-6 bg-white rounded-full p-1">
+                <a href="" class="flex items-center gap-1 py-3 px-4 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <span>Configurações</span>
+                </a>
+            </div>
+            <div class=" flex items-center gap-6 bg-white rounded-full p-3">
+                <a href="" class="flex items-center gap-1 p-1 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+                    </svg>
+                </a>
+            </div>
+            <div class="flex items-center">
+                <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
+                    <img src="/img/profile.avif" alt="profile" class="w-full h-full object-cover object-contain">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="">
+        <div class="">
+        <!-- ficha do servidor  -->
+        <div class="flex flex-col max-w-[1200px] mx-auto">
+            <header class="p-4 flex justify-start items-end text-gray-800">
+                <div class="flex items-end justify-between w-full">
+                    <h1 class="text-4xl">Ficha do servidor</h1>
+                    <p class="">Última atualização do formulário: 29/01/2025 10:32h</p>
+                </div>
+            </header>
+
+            <header class="flex p-4 items-center gap-3 rounded-b-xl">
+                <a href="" class="py-2 px-3 bg-gray-900 text-gray-100 border border-gray-200 rounded-full flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                    <span>Dados Pessoais</span>
+                </a>
+                <div class="bg-gray-400 h-[1px] w-[20px]"></div>
+                <a href="" class="py-2 px-3 border border-gray-200 rounded-full flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" />
+                    </svg>
+                    <span>Dados profissionais</span>
+                </a>
+                <div class="bg-gray-400 h-[1px] w-[20px]"></div>
+                <a href="" class="py-2 px-3 border border-gray-200 rounded-full flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
+                    </svg>
+                    <span>Dados Bancários</span>
+                </a>
+            </header>
+
+            <div class="flex gap-6 items-start justify-between p-4">
+                <div class="flex flex-col gap-2 w-full">
+                    <!-- dados pessoais -->
+                     <div class="">
+                        <div class="flex flex-col gap-3 ">
+                            <h1 class="uppercase text-gray-500 text-xl">Dados pessoais</h1>
+                            <div class="w-full h-[1px] bg-gray-400"></div>
+
+                            <div class="flex flex-col gap-2">
+                                <div class="flex flex-col gap-1 w-full">
+                                    <label for="">Nome:</label>
+                                    <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                </div>
+
+                                <div class="flex flex-col gap-1 w-full">
+                                    <label for="">Nome Pai:</label>
+                                    <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                </div>
+
+                                <div class="flex flex-col gap-1 w-full">
+                                    <label for="">Nome Mãe:</label>
+                                    <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                </div>
+
+                                <div class="flex gap-2">
+                                    <div class="flex flex-col gap-1 w-full">
+                                        <label for="">Estado Civil</label>
+                                        <select name="" id="" class="bg-white border border-gray-400">
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-1 w-full">
+                                        <label for="">Raça/Cor</label>
+                                        <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-2">
+                                    <div class="flex flex-col gap-1 w-full">
+                                        <label for="">Vínculo</label>
+                                        <select name="" id="" class="bg-white border border-gray-400">
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-1 w-full">
+                                        <label for="">Data de admissão</label>
+                                        <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-2">
+                                    <div class="flex flex-col gap-1 w-full">
+                                        <label for="">Motivo Desvínculo</label>
+                                        <select name="" id="" class="bg-white border border-gray-400">
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-1 w-full">
+                                        <label for="">Matrícula</label>
+                                        <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 w-full">
+                                    <label for="">Endereço</label>
+                                    <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                </div>
+
+                                <!-- <div class="flex gap-2">
+                                    <div class="flex flex-col gap-1 w-full">
+                                        <label for="">Complemento</label>
+                                        <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                    </div>
+                                    <div class="flex flex-col gap-1 w-full">
+                                        <label for="">CEP</label>
+                                        <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                    </div>
+                                </div> -->
+                                <div class="flex gap-2">
+                                    <div class="flex flex-col gap-1 w-full">
+                                        <label for="">Nacionalidade</label>
+                                        <select name="" id="" class="bg-white border border-gray-400">
+                                            <option value="">Selecione</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex flex-col gap-1 w-full">
+                                        <label for="">Naturalidade</label>
+                                        <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col gap-1 w-full">
+                                    <label for="">Observação:</label>
+                                    <input type="text" name="" id="" class="bg-white border border-gray-400">
+                                </div>
+
+                            </div>
+
+                        </div>
+                     </div>
+                    
+                </div>
+
+                <!-- image area -->
+                <div class="flex flex-col">
+                    <h1 class="flex text-center justify-center uppercase text-gray-500 mb-3">Perfil</h1>
+                    <div class="overflow-hidden h-[300px] w-[250px] rounded-md">
+                        <img src="/img/female.jpg" alt="foto" class="h-full w-full object-cover">
+                    </div>
+
+                    <div class="flex flex-col gap-2 py-4 ">
+                        <div class="flex items-center gap-2 justify-between">
+                            <h1 class="font-semibold ">Idade:</h1>
+                            <p>36 anos</p>
+                        </div>
+                        <div class="flex items-center gap-2 justify-between">
+                            <h1 class="font-semibold ">Vínculo:</h1>
+                            <p>Contratado</p>
+                        </div>
+                        <div class="flex items-center gap-2 justify-between">
+                            <h1 class="font-semibold ">Tempo de serviço:</h1>
+                            <p>2 anos</p>
+                        </div>
+                        <div class="flex items-center gap-2 justify-between">
+                            <h1 class="font-semibold ">Função:</h1>
+                            <p>Agente Adm.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 justify-between">
+                        <button class="flex items-center border border-gray-500 py-2 px-4 w-full text-center justify-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m18.375 12.739-7.693 7.693a4.5 4.5 0 0 1-6.364-6.364l10.94-10.94A3 3 0 1 1 19.5 7.372L8.552 18.32m.009-.01-.01.01m5.699-9.941-7.81 7.81a1.5 1.5 0 0 0 2.112 2.13" />
+                            </svg>
+                            <span class="text-sm">Inserir</span>
+                        </button>
+                        <button class="flex items-center bg-gray-900 text-white py-2 px-4 w-full text-center justify-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                            </svg>
+                            <span class="text-sm">Excluir</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+        </div>
+        </div>
+    </main>
+</body>
+</html>

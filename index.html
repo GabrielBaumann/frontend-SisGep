@@ -13,61 +13,26 @@
         }
     </style>
 </head>
-<body class="md:h-screen bg-white p-6 md:px-6 md:pt-0 grid grid-rows-8">
+<body class="md:h-screen grid grid-rows-8 bg-gradient-to-br from-gray-200 to-blue-100">
     
-    <!-- Mobile bottom navigation -->
-     <div class="z-99 md:hidden fixed right-[15vw] bottom-10 bg-black p-1 rounded-full">
-        <div class="flex items-center gap-2">
-            <div class=" flex items-center gap-6 bg-green-300 rounded-full p-4">
-                <a href="" class="flex items-center gap-1 p-1 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                    </svg>
-                </a>
+    <header class="hidden md:flex px-4 row-span-1 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <!-- Logo -->
+            <div class="h-[7vh]">
+                <img src="/img/logo.png" alt="logo" class="w-full h-full object-contain object-center">
             </div>
-            <div class=" flex items-center gap-6 bg-white/20 rounded-full p-4">
-                <a href="" class="flex items-center gap-1 p-1 rounded-full text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                    </svg>
-                </a>
+            <div class="hidden md:flex items-center gap-3 bg-white rounded-full p-1">
+                <a href="" class="py-3 px-6 bg-black/90 text-white rounded-full">Início</a>
+                <a href="/servidores.html" class="py-3 px-6 rounded-full">Servidores</a>
+                <a href="" class="py-3 px-6 rounded-full">Gestão integrada</a>
+                <a href="" class="py-3 px-6 rounded-full">Relatórios</a>
             </div>
-            <div class=" flex items-center gap-6 bg-white/20 rounded-full p-4">
-                <a href="" class="flex items-center gap-1 p-1 rounded-full text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
-                    </svg>
-                </a>
-            </div>
-            <div class=" flex items-center gap-6 bg-white/20 rounded-full p-4">
-                <a href="" class="flex items-center gap-1 p-1 rounded-full text-white">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                    </svg>
-                </a>
-            </div>
-
-        </div>
-     </div>
-
-    <!-- Main header -->
-    <header class="row-span-1 hidden md:flex justify-between items-center text-sm">
-        <!-- Logo -->
-        <div class="overflow-hidden h-[9vh]">
-            <img src="/img/logo.png" alt="logo" class="h-full w-full object-contain object-center">
         </div>
 
         <!-- Header -->
-        <div class="flex items-center gap-3">
-            <div class=" flex items-center gap-3 bg-white rounded-full p-1">
-                <a href="" class="py-4 px-6 bg-black/90 text-white rounded-full">Início</a>
-                <a href="" class="py-4 px-6">Servidores</a>
-                <a href="" class="py-4 px-6">Gestão integrada</a>
-                <a href="" class="py-4 px-6">Relatórios</a>
-            </div>
+        <div class="hidden md:flex items-center gap-2">
             <div class=" flex items-center gap-6 bg-white rounded-full p-1">
-                <a href="" class="flex items-center gap-1 py-4 px-4 rounded-full">
+                <a href="" class="flex items-center gap-1 py-3 px-4 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
@@ -75,29 +40,25 @@
                     <span>Configurações</span>
                 </a>
             </div>
-            <div class=" flex items-center gap-6 bg-white rounded-full p-4">
+            <div class=" flex items-center gap-6 bg-white rounded-full p-3">
                 <a href="" class="flex items-center gap-1 p-1 rounded-full">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
                     </svg>
                 </a>
             </div>
-            <div class=" flex items-center gap-6 bg-white rounded-full p-4">
-                <a href="" class="flex items-center gap-1 p-1 rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-                    </svg>
-                </a>
+            <div class="flex items-center">
+                <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
+                    <img src="/img/profile.avif" alt="profile" class="w-full h-full object-cover object-contain">
+                </div>
             </div>
         </div>
-
     </header>
 
-    <!-- Welcome header -->
-    <header class="row-span-2">
+    <!-- Welcome area -->
+    <div class="row-span-2 px-4 pt-4 md:pt-0 flex flex-col justify-center">
         <h1 class="text-4xl">Bem vindo de volta, João!</h1>
         <div class="mt-3 w-full grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
-
             <!-- First part -->
             <div class="flex flex-col md:col-span-1 bg-">
                 <!-- Progress bar -->
@@ -154,244 +115,311 @@
                         </div>
                         <span>Servidores</span>
                     </div>
-
-                    
-
-                    
-
                 </div>
             </div>
         </div>
-    </header>
+    </div>
 
-    <!-- Dashboard area -->
-    <main class="row-span-5">
-        <div class="h-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-1">
+    <main class="row-span-5 p-3">
+    <div class="h-full grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-3">
 
-            <div class="overflow-hidden rounded-3xl col-span-1 md:row-span-1 w-full h-full">
-                <img src="/img/office-light.jpg" alt="office" class="h-full w-full object-center blur-xl z-1">
+        <!-- Card de Estatísticas (Destaque) -->
+        <div class="bg-gradient-to-br from-blue-700 to-blue-800 overflow-hidden rounded-3xl col-span-1 md:row-span-1 w-full h-full p-4">
+            <div class="flex flex-col h-full justify-between">
+                <div>
+                    <h2 class="text-lg font-semibold text-white mb-1">Funcionários</h2>
+                    <p class="text-xs text-blue-100">Status atual da empresa</p>
+                </div>
+                <div class="space-y-3 mt-2">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-xs font-medium text-white">Ativos</span>
+                            <span class="text-xs font-medium text-white">85%</span>
+                        </div>
+                        <div class="w-full bg-blue-900 bg-opacity-50 rounded-full h-2">
+                            <div class="bg-white h-2 rounded-full" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-xs font-medium text-white">Contratados</span>
+                            <span class="text-xs font-medium text-white">12%</span>
+                        </div>
+                        <div class="w-full bg-blue-900 bg-opacity-50 rounded-full h-2">
+                            <div class="bg-green-300 h-2 rounded-full" style="width: 12%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-xs font-medium text-white">Demitidos</span>
+                            <span class="text-xs font-medium text-white">3%</span>
+                        </div>
+                        <div class="w-full bg-blue-900 bg-opacity-50 rounded-full h-2">
+                            <div class="bg-red-300 h-2 rounded-full" style="width: 3%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
 
-                <!-- ativos, contratados e demitidos -->
+        <!-- Gráfico Diário -->
+        <div class="bg-white/80 rounded-3xl md:col-span-1 md:row-span-1 w-full h-full flex flex-col">
+            <header class="p-3 flex justify-between border-b border-gray-100">
+                <h1 class="text-base font-semibold text-gray-800">Gráfico Diário</h1>
+                <a href="" class="p-1.5 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-gray-600">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+            </header>
 
-            </div>  
+            <!-- Gráfico de barras -->
+            <div class="p-3 flex-1 flex items-end justify-between space-x-1">
+                <div class="flex flex-col items-center h-full flex-1">
+                    <div class="relative flex-1 w-full flex items-end">
+                        <div class="bg-blue-500 w-full rounded-t transition-all hover:bg-blue-600" style="height: 60%"></div>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-600">Seg</span>
+                </div>
+                <div class="flex flex-col items-center h-full flex-1">
+                    <div class="relative flex-1 w-full flex items-end">
+                        <div class="bg-blue-500 w-full rounded-t transition-all hover:bg-blue-600" style="height: 80%"></div>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-600">Ter</span>
+                </div>
+                <div class="flex flex-col items-center h-full flex-1">
+                    <div class="relative flex-1 w-full flex items-end">
+                        <div class="bg-blue-500 w-full rounded-t transition-all hover:bg-blue-600" style="height: 45%"></div>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-600">Qua</span>
+                </div>
+                <div class="flex flex-col items-center h-full flex-1">
+                    <div class="relative flex-1 w-full flex items-end">
+                        <div class="bg-blue-500 w-full rounded-t transition-all hover:bg-blue-600" style="height: 70%"></div>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-600">Qui</span>
+                </div>
+                <div class="flex flex-col items-center h-full flex-1">
+                    <div class="relative flex-1 w-full flex items-end">
+                        <div class="bg-blue-500 w-full rounded-t transition-all hover:bg-blue-600" style="height: 90%"></div>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-600">Sex</span>
+                </div>
+                <div class="flex flex-col items-center h-full flex-1">
+                    <div class="relative flex-1 w-full flex items-end">
+                        <div class="bg-blue-500 w-full rounded-t transition-all hover:bg-blue-600" style="height: 30%"></div>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-600">Sáb</span>
+                </div>
+                <div class="flex flex-col items-center h-full flex-1">
+                    <div class="relative flex-1 w-full flex items-end">
+                        <div class="bg-blue-500 w-full rounded-t transition-all hover:bg-blue-600" style="height: 20%"></div>
+                    </div>
+                    <span class="text-xs mt-1 text-gray-600">Dom</span>
+                </div>
+            </div>
+        </div>
 
-            <!-- Daily graphic -->
-            <div class="bg-blue-50  rounded-3xl md:col-span-1 md:row-span-1 w-full h-full">
-                <header class="p-4 flex justify-between">
-                    <h1 class="text-2xl">Gráfico dia</h1>
-                    <a href="" class="p-3 bg-white rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        <!-- Visão Geral -->
+        <div class="bg-white/80 rounded-3xl md:col-span-1 md:row-span-1 w-full h-full flex flex-col">
+            <header class="p-3 flex justify-between border-b border-gray-100">
+                <h1 class="text-base font-semibold text-gray-800">Visão Geral</h1>
+                <a href="" class="p-1.5 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 text-gray-600">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                </a>
+            </header>
+
+            <!-- Gráfico de pizza -->
+            <div class="p-2 flex-1 flex justify-center items-center">
+                <div class="relative w-20 h-20">
+                    <div class="absolute inset-0 rounded-full border-8 border-gray-200"></div>
+                    <div class="absolute inset-0 rounded-full border-8 border-blue-500" style="clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);"></div>
+                    <div class="absolute inset-0 rounded-full border-8 border-blue-400" style="clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);"></div>
+                    <div class="absolute inset-0 rounded-full border-8 border-blue-600" style="clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <span class="text-xs font-medium text-gray-700">150</span>
+                    </div>
+                </div>
+            </div>
+            <div class="px-4 pb-3 flex justify-between">
+                <div class="flex items-center">
+                    <div class="w-2 h-2 rounded-full bg-blue-500 mr-1"></div>
+                    <span class="text-xs text-gray-600">Setor A</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-2 h-2 rounded-full bg-blue-400 mr-1"></div>
+                    <span class="text-xs text-gray-600">Setor B</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-2 h-2 rounded-full bg-blue-600 mr-1"></div>
+                    <span class="text-xs text-gray-600">Setor C</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico e Card -->
+        <div class="bg-white/80 rounded-3xl md:col-span-1 md:row-span-2 w-full h-full grid grid-rows-2 overflow-hidden">
+            <!-- Gráfico de linha no topo -->
+            <div class="p-3 border-b border-gray-100 flex flex-col">
+                <h2 class="text-base font-semibold text-gray-800 mb-2">Performance</h2>
+                <div class="flex-1 relative">
+                    <!-- Linha do gráfico com curva suave -->
+                    <div class="absolute bottom-0 left-0 w-full h-full">
+                        <svg viewBox="0 0 100 100" class="w-full h-full" preserveAspectRatio="none">
+                            <path d="M0,80 C15,75 25,50 40,70 C55,90 65,30 80,50 C85,55 95,25 100,20" 
+                                  stroke="#3b82f6" 
+                                  stroke-width="2" 
+                                  fill="none" 
+                                  stroke-linecap="round" />
                         </svg>
-                    </a>
-                </header>
-
-                <!-- graphic -->
-                <div class="">
-                    
-                </div>
-            </div>
-
-            <!-- General vision -->
-            <div class="bg-blue-50  rounded-3xl md:col-span-1 md:row-span-1 w-full h-full">
-                <header class="p-4 flex justify-between">
-                    <h1 class="text-2xl">Visão geral</h1>
-                    <a href="" class="p-3 bg-white rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                        </svg>
-                    </a>
-                </header>
-
-                <!-- graphic -->
-                <div class="">
-                    
-                </div>
-            </div>
-
-            <!-- Graphic on top & Card in Bottom -->
-            <div class="bg-blue-50 rounded-3xl md:col-span-1 md:row-span-2 w-full h-full grid grid-rows-2 overflow-hidden">
-                <div class="row-span-1 bg-black/80 text-white p-4 rounded-3xl">
-                    <div class="">
-                    <!-- Dias da semana -->
-                    <div class="grid grid-cols-7 gap-1 mb-2">
-                        <div class="text-center text-gray-400 text-sm py-2">Dom</div>
-                        <div class="text-center text-gray-400 text-sm py-2">Seg</div>
-                        <div class="text-center text-gray-400 text-sm py-2">Ter</div>
-                        <div class="text-center text-gray-400 text-sm py-2">Qua</div>
-                        <div class="text-center text-gray-400 text-sm py-2">Qui</div>
-                        <div class="text-center text-gray-400 text-sm py-2">Sex</div>
-                        <div class="text-center text-gray-400 text-sm py-2">Sáb</div>
-                    </div>
-
-                    <!-- Grid de dias -->
-                    <div class="grid grid-cols-7 text-sm">
-                        <!-- Dias vazios antes do início do mês -->
-                        <div class="h-10 flex items-center justify-center text-gray-600"></div>
-                        <div class="h-10 flex items-center justify-center text-gray-600"></div>
-                        <div class="h-10 flex items-center justify-center text-gray-600"></div>
-                        
-                        <!-- Dias do mês -->
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">1</span>
-                        <div class="w-1 h-1 bg-yellow-400 rounded-full mt-1"></div>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">2</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">3</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">4</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">5</span>
-                        <div class="w-1 h-1 bg-yellow-400 rounded-full mt-1"></div>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">6</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">7</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">8</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">9</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">10</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">11</span>
-                        <div class="w-1 h-1 bg-yellow-400 rounded-full mt-1"></div>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">12</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">13</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">14</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">15</span>
-                        <div class="w-1 h-1 bg-yellow-400 rounded-full mt-1"></div>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">16</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">17</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">18</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">19</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">20</span>
-                        <div class="w-1 h-1 bg-yellow-400 rounded-full mt-1"></div>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">21</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">22</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">23</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">24</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">25</span>
-                        <div class="w-1 h-1 bg-yellow-400 rounded-full mt-1"></div>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">26</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">27</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">28</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">29</span>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center bg-yellow-400 text-gray-900 font-semibold rounded-lg cursor-pointer transition-colors">
-                        <span class="text-xs">30</span>
-                        <div class="w-1 h-1 bg-gray-900 rounded-full mt-1"></div>
-                        </div>
-                        <div class="h-10 flex flex-col items-center justify-center rounded-lg hover:bg-gray-800 cursor-pointer transition-colors">
-                        <span class="text-xs">31</span>
-                        </div>
-                    </div>
-
-                    </div>
-                </div>
-
-                <div class="row-span-1 rounded-3xl">
-                    <div class="flex flex-col items-center justify-center p-6">
-                    <!-- Título -->
-                    <h2 class="text-lg font-medium text-gray-700 mb-4">Distribuição por Gênero</h2>
-                    
-                    <!-- Container do gráfico -->
-                    <div class="relative w-48 h-48 mb-6">
-                        <!-- Gráfico de pizza -->
-                        <div class="absolute inset-0 rounded-full border-[16px] border-blue-500 border-r-transparent transform -rotate-45"></div>
-                        
-                        <!-- Centro do gráfico -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-32 h-32 bg-white rounded-full"></div>
-                        </div>
-                        
-                        <!-- Indicador da proporção -->
-                        <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-gray-800">65%</div>
-                            <div class="text-xs text-gray-500">Homens</div>
-                        </div>
-                        </div>
                     </div>
                     
-                    <!-- Legenda -->
-                    <div class="flex space-x-6">
-                        <div class="flex items-center">
-                        <div class="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
-                        <span class="text-sm text-gray-600">Homens</span>
-                        </div>
-                        <div class="flex items-center">
-                        <div class="w-3 h-3 rounded-full bg-gray-300 mr-2"></div>
-                        <span class="text-sm text-gray-600">Mulheres</span>
-                        </div>
-                    </div>
+                    <!-- Pontos do gráfico -->
+                    <div class="absolute bottom-0 left-0 w-full h-full">
+                        <div class="absolute w-2 h-2 rounded-full bg-blue-500 border-2 border-white shadow" style="left: 0%; bottom: 80%"></div>
+                        <div class="absolute w-2 h-2 rounded-full bg-blue-500 border-2 border-white shadow" style="left: 40%; bottom: 70%"></div>
+                        <div class="absolute w-2 h-2 rounded-full bg-blue-500 border-2 border-white shadow" style="left: 80%; bottom: 50%"></div>
+                        <div class="absolute w-2 h-2 rounded-full bg-blue-500 border-2 border-white shadow" style="left: 100%; bottom: 20%; transform: translateX(-50%)"></div>
                     </div>
                 </div>
-
-            </div>
-
-            <!-- General table -->
-            <div class="bg-blue-50  rounded-3xl md:col-span-1 md:row-span-1 w-full h-full">
-                <div class="">
-                    <!-- escolaridade -->
-                </div>
-            </div>
-
-            <!-- Turnover Graphic -->
-            <div class="bg-blue-50  rounded-3xl md:col-span-2 md:row-span-1 w-full h-full">
-                <!-- gráfico de linha -->
-                  
             </div>
             
+            <!-- Card de informações na parte inferior -->
+            <div class="p-3 flex flex-col">
+                <h2 class="text-base font-semibold text-gray-800 mb-2">Resumo Mensal</h2>
+                <div class="space-y-2 flex-1">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs text-gray-600">Meta do mês</span>
+                        <span class="text-xs font-medium text-gray-800">85%</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs text-gray-600">Crescimento</span>
+                        <span class="text-xs font-medium text-green-500">+12%</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs text-gray-600">Novos contratos</span>
+                        <span class="text-xs font-medium text-gray-800">24</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs text-gray-600">Turnover</span>
+                        <span class="text-xs font-medium text-red-500">5%</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+
+        <!-- Tabela de Escolaridade -->
+        <div class="bg-white/80 rounded-3xl md:col-span-1 md:row-span-1 w-full h-full overflow-hidden flex flex-col">
+            <div class="p-3 h-full flex flex-col">
+                <h2 class="text-base font-semibold text-gray-800 mb-2">Escolaridade</h2>
+                <div class="overflow-x-auto flex-1">
+                    <table class="w-full text-xs">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="text-left pb-1 text-gray-600 font-medium">Nível</th>
+                                <th class="text-right pb-1 text-gray-600 font-medium">Funcionários</th>
+                                <th class="text-right pb-1 text-gray-600 font-medium">%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-1.5 text-gray-700">Ensino Médio</td>
+                                <td class="py-1.5 text-right text-gray-700">42</td>
+                                <td class="py-1.5 text-right text-gray-700">28%</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-1.5 text-gray-700">Graduação</td>
+                                <td class="py-1.5 text-right text-gray-700">68</td>
+                                <td class="py-1.5 text-right text-gray-700">45%</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50">
+                                <td class="py-1.5 text-gray-700">Pós-graduação</td>
+                                <td class="py-1.5 text-right text-gray-700">25</td>
+                                <td class="py-1.5 text-right text-gray-700">17%</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="py-1.5 text-gray-700">Mestrado/Doutorado</td>
+                                <td class="py-1.5 text-right text-gray-700">15</td>
+                                <td class="py-1.5 text-right text-gray-700">10%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico de Turnover -->
+        <div class="bg-white/80 rounded-3xl md:col-span-2 md:row-span-1 w-full h-full overflow-hidden flex flex-col">
+            <header class="p-3 flex justify-between items-center border-b border-gray-100">
+                <h1 class="text-base font-semibold text-gray-800">Turnover por Trimestre</h1>
+                <div class="flex space-x-1">
+                    <button class="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs hover:bg-gray-200 transition-colors">2023</button>
+                    <button class="px-2 py-1 bg-blue-500 text-white rounded text-xs hover:bg-blue-600 transition-colors">2024</button>
+                </div>
+            </header>
+            
+            <!-- Gráfico de linhas múltiplas -->
+            <div class="p-3 flex-1 relative">
+                <!-- Linhas do gráfico com curvas suaves -->
+                <div class="absolute bottom-0 left-0 w-full h-full">
+                    <!-- Entradas - Linha azul com curva -->
+                    <svg viewBox="0 0 100 100" class="w-full h-full" preserveAspectRatio="none">
+                        <path d="M0,70 C20,60 30,45 50,60 C65,70 75,35 100,30" 
+                              stroke="#3b82f6" 
+                              stroke-width="2" 
+                              fill="none" 
+                              stroke-linecap="round" />
+                    </svg>
+                    
+                    <!-- Saídas - Linha vermelha com curva -->
+                    <svg viewBox="0 0 100 100" class="w-full h-full" preserveAspectRatio="none">
+                        <path d="M0,50 C15,55 35,45 50,40 C65,45 75,50 100,60" 
+                              stroke="#ef4444" 
+                              stroke-width="2" 
+                              fill="none" 
+                              stroke-linecap="round" />
+                    </svg>
+                </div>
+                
+                <!-- Pontos do gráfico -->
+                <div class="absolute bottom-0 left-0 w-full h-full">
+                    <!-- Pontos da linha azul -->
+                    <div class="absolute w-2 h-2 rounded-full bg-blue-500 border-2 border-white shadow" style="left: 0%; bottom: 70%"></div>
+                    <div class="absolute w-2 h-2 rounded-full bg-blue-500 border-2 border-white shadow" style="left: 50%; bottom: 60%"></div>
+                    <div class="absolute w-2 h-2 rounded-full bg-blue-500 border-2 border-white shadow" style="left: 100%; bottom: 30%; transform: translateX(-50%)"></div>
+                    
+                    <!-- Pontos da linha vermelha -->
+                    <div class="absolute w-2 h-2 rounded-full bg-red-500 border-2 border-white shadow" style="left: 0%; bottom: 50%"></div>
+                    <div class="absolute w-2 h-2 rounded-full bg-red-500 border-2 border-white shadow" style="left: 50%; bottom: 40%"></div>
+                    <div class="absolute w-2 h-2 rounded-full bg-red-500 border-2 border-white shadow" style="left: 100%; bottom: 60%; transform: translateX(-50%)"></div>
+                </div>
+                
+                <!-- Legenda -->
+                <div class="absolute bottom-2 left-3 flex space-x-3">
+                    <div class="flex items-center">
+                        <div class="w-2 h-0.5 bg-blue-500 mr-1"></div>
+                        <span class="text-xs text-gray-600">Entradas</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-0.5 bg-red-500 mr-1"></div>
+                        <span class="text-xs text-gray-600">Saídas</span>
+                    </div>
+                </div>
+                
+                <!-- Rótulos do eixo X -->
+                <div class="absolute -bottom-1 left-0 right-0 flex justify-between px-3">
+                    <span class="text-xs text-gray-500">T1</span>
+                    <span class="text-xs text-gray-500">T2</span>
+                    <span class="text-xs text-gray-500">T3</span>
+                    <span class="text-xs text-gray-500">T4</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</main>
 
 </body>
 </html>
